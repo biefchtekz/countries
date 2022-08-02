@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Arial;
 }
 
 .navbars{
@@ -11,6 +12,10 @@
   align-items: center;
   padding: 0 2rem;
   p{
-
+    font-family: Garamond;
+    color: #ffcc00;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
   }
 }
