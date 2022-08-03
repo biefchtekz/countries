@@ -24,17 +24,8 @@ export class CountryComponent implements OnInit {
       this.getCountry.getCountry(param['country']).subscribe(obs => {
         // @ts-ignore
         this.country = obs[0]
-        this.getCurrencyName()
       })
     })
   }
-
-  getCurrencyName() {
-    let bb = JSON.stringify(Object.values(this.country.currencies))
-    bb = bb.replace('[', '')
-    bb = bb.replace(']', '')
-    this.currency = JSON.parse(bb).name
-  }
-
 
 }
