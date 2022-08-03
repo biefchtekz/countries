@@ -1,0 +1,41 @@
+.country-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  flex-wrap: wrap;
+
+  h1 {
+    margin: 15px;
+  }
+
+  img {
+    margin: 15px;
+    height: 100px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  tr {
+    &:nth-child(even) {
+      background: rgba(128, 128, 128, 0.3);
+    }
+  }
+
+  td {
+    &:first-child {
+      width: 30%;
+    }
+
+    padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+  }
+}
+
+
+.spinner{
+  margin: auto;
+}

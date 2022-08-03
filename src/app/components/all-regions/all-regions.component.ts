@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-all-regions',
   templateUrl: './all-regions.component.html',
   styleUrls: ['./all-regions.component.scss']
 })
-export class AllRegionsComponent implements OnInit {
+export class AllRegionsComponent{
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
+  selectRegion(region: string) {
+    this.router.navigate(['region'], {queryParams: {region}})
   }
-
 }

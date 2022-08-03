@@ -1,1 +1,36 @@
-<p>country works!</p>
+<div class="container" *ngIf="country else loading">
+  <div class="country-header">
+    <img src="{{country.flags.svg}}">
+    <h1>{{country.name.common}}, {{country.cca2}}</h1>
+  </div>
+  <table>
+    <tr>
+      <td>Capital</td>
+      <td>{{country.capital}}</td>
+    </tr>
+    <tr>
+      <td>Population</td>
+      <td>{{country.population}}</td>
+    </tr>
+    <tr>
+      <td>Currency</td>
+      <td>{{Object.keys(country.currencies)}}</td>
+    </tr>
+    <tr>
+      <td>Official name</td>
+      <td>{{country.name.official}}</td>
+    </tr>
+    <tr>
+      <td>Subregion</td>
+      <td>{{country.subregion}}</td>
+    </tr>
+    <tr>
+      <td>On map</td>
+      <td><a href="{{country.maps.googleMaps}}" target="_blank">{{country.name.common}}</a></td>
+    </tr>
+  </table>
+</div>
+<ng-template #loading>
+  <mat-spinner class="spinner"></mat-spinner>
+</ng-template>
+

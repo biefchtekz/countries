@@ -1,0 +1,46 @@
+::-webkit-scrollbar {
+  width: 20px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  border-left: 1px solid grey;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  border-left: 1px solid grey;
+  background: #0066cc;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.countries {
+  height: 600px;
+  overflow-y: scroll;
+
+  .country {
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    transition: .3s background;
+    padding: 5px;
+
+    img {
+      height: 40px;
+      width: 60px;
+      object-fit: cover;
+      margin-right: 10px;
+      border: 1px solid rgba(128, 128, 128, 0.5);
+    }
+
+    &:hover{
+      background: rgba(128, 128, 128, 0.2);
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid gray;
+    }
+  }
+}

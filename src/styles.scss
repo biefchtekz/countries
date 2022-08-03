@@ -1,21 +1,32 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 * {
   margin: 0;
   padding: 0;
   font-family: Arial;
 }
 
-.navbars{
-  width: 100%;
-  background: #0066cc;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
-  p{
-    font-family: Garamond;
-    color: #ffcc00;
-    font-size: 2rem;
+.container {
+  font-size: 1.5rem;
+  width: 60%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: auto;
+  margin: 2rem auto;
+  .title{
+    line-height: 200%;
+    text-align: center;
     font-weight: 600;
-    cursor: pointer;
+    background: #0066cc;
+    color: white;
+    border-radius: 4px 4px 0 0;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media screen and (max-width: 440px) {
+  .container{
+    width: 90%;
   }
 }

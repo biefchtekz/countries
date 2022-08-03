@@ -1,1 +1,7 @@
-<p>region works!</p>
+<div class="container countries">
+  <div *ngFor="let country of countries" class="country" (click)="selectCountry(country.name.common)">
+    <img src="{{country.flags.svg}}">
+    <p>{{country.name.common}}</p>
+  </div>
+</div>
+

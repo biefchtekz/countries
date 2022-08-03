@@ -1,0 +1,24 @@
+.regions{
+  margin: 5vmin 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  .region-plate{
+    min-width: 198px;
+    cursor: pointer;
+    padding: 1rem;
+    border: 1px solid grey;
+    padding: 3rem;
+    margin: 1.5rem;
+    border-radius: 5px;
+    transition: .3s color, .3s background;
+    text-align: center;
+    &:hover{
+      color: #ffcc00;
+      background: #0066cc;
+    }
+  }
+}
+
