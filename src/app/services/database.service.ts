@@ -14,6 +14,6 @@ export class DatabaseService {
   }
 
   getCountry(countryName: string): Observable<Object> {
-    return this.http.get(`https://restcountries.com/v3.1/name/${countryName}`)
+    return this.http.get(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
   }
 }
