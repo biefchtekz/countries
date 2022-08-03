@@ -1,9 +1,14 @@
 <div class="container" *ngIf="country else loading">
   <div class="country-header">
-    <img src="{{country.flags.svg}}">
-    <h1>{{country.name.common}}, {{country.cca2}}</h1>
+    <img src="{{country.flags.svg}}" class="flag">
+    <img src="{{country.coatOfArms.svg}}" class="symbol">
+    <h1>{{country.name.common}}</h1>
   </div>
   <table>
+    <tr>
+      <td>Official name</td>
+      <td>{{country.name.official}}</td>
+    </tr>
     <tr>
       <td>Capital</td>
       <td>{{country.capital}}</td>
@@ -14,11 +19,11 @@
     </tr>
     <tr>
       <td>Currency</td>
-      <td>{{Object.keys(country.currencies)}}</td>
+      <td>{{currency}}, {{Object.keys(country.currencies)}}</td>
     </tr>
     <tr>
-      <td>Official name</td>
-      <td>{{country.name.official}}</td>
+      <td>Code</td>
+      <td>{{country.cca2}}</td>
     </tr>
     <tr>
       <td>Subregion</td>
