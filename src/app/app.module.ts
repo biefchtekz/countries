@@ -14,6 +14,7 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {FormsModule} from "@angular/forms";
 import { SearchPipe } from './pipes/search.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SearchPipe } from './pipes/search.pipe';
     AllRegionsComponent,
     RegionComponent,
     CountryComponent,
-    SearchPipe
+    SearchPipe,
+    SortPipe
   ],
     imports: [
         BrowserModule,

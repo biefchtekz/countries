@@ -1,15 +1,17 @@
 <div class="container" *ngIf="countries else loading">
   <div class="search-bar">
     <p>🔎</p>
-    <input type="text" placeholder="Find country in {{region}}" [(ngModel)]="searchStr" id="countrySearch">
+    <input autocomplete="off" type="text" placeholder="Find country in {{region}}" [(ngModel)]="searchStr"
+           id="countrySearch">
   </div>
 
   <div class="countries">
-    <div *ngFor="let country of countries | searchCountry:searchStr" class="country"
+    <div *ngFor="let country of countries | searchCountry:searchStr | sort" class="country"
          (click)="selectCountry(country.name.common)">
       <img src="{{country.flags.svg}}">
       <p>{{country.name.common}}</p>
     </div>
+    <p *ngIf="!(countries | searchCountry:searchStr).length" class="empty-search">No such country in {{region}} :(</p>
   </div>
 </div>
 <ng-template #loading>

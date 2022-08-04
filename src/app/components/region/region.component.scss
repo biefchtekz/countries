@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     transition: .3s background;
-    padding: 5px;
+    padding: 5px 10px;
 
     img {
       height: 40px;
@@ -43,20 +43,25 @@
       border-bottom: 1px solid gray;
     }
   }
+  .empty-search{
+    margin: 10px 0;
+    text-align: center;
+  }
 }
 
 .search-bar {
-  padding: 5px;
+  padding: 5px 10px;
   width: 100%;
   box-sizing: border-box;
   border-bottom: 1px solid grey;
   font-size: 20px;
   display: flex;
+  align-items: center;
 
   input {
     font-size: inherit;
     border: none;
     outline: none;
-    padding: inherit;
+    margin: 5px;
   }
 }
