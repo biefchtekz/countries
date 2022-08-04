@@ -6,6 +6,7 @@
 }
 
 .container {
+  box-sizing: border-box;
   font-size: 1.5rem;
   width: 60%;
   border: 1px solid gray;
@@ -32,4 +33,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .header{
     justify-content: center;
   }
+}
+
+.spinner{
+  position: absolute;
+  margin: auto;
+  top: 35%;
 }

@@ -1,7 +1,18 @@
-<div class="container countries">
-  <div *ngFor="let country of countries" class="country" (click)="selectCountry(country.name.common)">
-    <img src="{{country.flags.svg}}">
-    <p>{{country.name.common}}</p>
+<div class="container" *ngIf="countries else loading">
+  <div class="search-bar">
+    <p>🔎</p>
+    <input type="text" placeholder="Find country in {{region}}" [(ngModel)]="searchStr" id="countrySearch">
+  </div>
+
+  <div class="countries">
+    <div *ngFor="let country of countries | searchCountry:searchStr" class="country"
+         (click)="selectCountry(country.name.common)">
+      <img src="{{country.flags.svg}}">
+      <p>{{country.name.common}}</p>
+    </div>
   </div>
 </div>
+<ng-template #loading>
+  <mat-spinner class="spinner"></mat-spinner>
+</ng-template>
 

@@ -11,13 +11,13 @@
 ::-webkit-scrollbar-thumb {
   border-left: 1px solid grey;
   background: #0066cc;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .countries {
   height: 600px;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   .country {
     cursor: pointer;
@@ -35,12 +35,28 @@
       border: 1px solid rgba(128, 128, 128, 0.5);
     }
 
-    &:hover{
+    &:hover {
       background: rgba(128, 128, 128, 0.2);
     }
 
     &:not(:last-child) {
       border-bottom: 1px solid gray;
     }
+  }
+}
+
+.search-bar {
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid grey;
+  font-size: 20px;
+  display: flex;
+
+  input {
+    font-size: inherit;
+    border: none;
+    outline: none;
+    padding: inherit;
   }
 }

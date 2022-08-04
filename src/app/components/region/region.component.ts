@@ -9,7 +9,9 @@ import {DatabaseService} from "../../services/database.service";
 })
 export class RegionComponent implements OnInit {
 
+  searchStr = ''
   countries: any
+  region: string = '';
 
   constructor(
     private router: Router,
@@ -20,6 +22,7 @@ export class RegionComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(param => {
+      this.region = param['region']
       this.countryList.getRegionCountries(param['region']).subscribe(obs => {
         this.countries = obs
       })
