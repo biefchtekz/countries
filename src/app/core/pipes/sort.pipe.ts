@@ -12,6 +12,12 @@ export class SortPipe implements PipeTransform {
       // @ts-ignore
       return;
     }
+    for (let i of array) {
+      if (i.name.common === "Russia") {
+        array.splice(array.indexOf(i), 1)
+      }
+    }
+
     array.sort((a: Country, b: Country) => {
       if (a.name.common < b.name.common) {
         return -1;
