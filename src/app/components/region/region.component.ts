@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {DatabaseService} from "../../services/database.service";
+import {DatabaseService} from "../../core/services/database.service";
 import {
   logExperimentalWarnings
 } from "@angular-devkit/build-angular/src/builders/browser-esbuild/experimental-warnings";

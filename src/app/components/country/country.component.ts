@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {DatabaseService} from "../../services/database.service";
+import {DatabaseService} from "../../core/services/database.service";
 
 @Component({
   selector: 'app-country',

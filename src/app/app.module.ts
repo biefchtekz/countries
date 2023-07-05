@@ -13,8 +13,8 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {FormsModule} from "@angular/forms";
-import { SearchPipe } from './pipes/search.pipe';
-import { SortPipe } from './pipes/sort.pipe';
+import { SearchPipe } from './core/pipes/search.pipe';
+import { SortPipe } from './core/pipes/sort.pipe';
 
 @NgModule({
   declarations: [

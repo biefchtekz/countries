@@ -6,13 +6,10 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class DatabaseService {
-
   constructor(private http: HttpClient) { }
-
   getRegionCountries(region: string): Observable<Object> {
     return this.http.get(`https://restcountries.com/v3.1/region/${region}`)
   }
-
   getCountry(countryName: string): Observable<Object> {
     return this.http.get(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
   }
